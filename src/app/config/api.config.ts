@@ -1,3 +1,3 @@
-export const API_CONFIG  = {
-  url_api: "http://localhost:8080";
+export const API_CONFIG = {
+    urlApi: "http://localhost:8082"
 }

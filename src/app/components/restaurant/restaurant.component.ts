@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Restaurant } from 'src/app/models/restaurant.model';
 
 @Component({
@@ -8,16 +8,11 @@ import { Restaurant } from 'src/app/models/restaurant.model';
 })
 export class RestaurantComponent implements OnInit {
 
-  public restaurant: Restaurant ;
+  @Input() public restaurant: Restaurant ;
 
   constructor() { }
 
   ngOnInit() {
-    this.restaurant.name = "TASTY TREATS";
-    this.restaurant.rating = 4.5;
-    this.restaurant.category = "Bakery";
-    this.restaurant.deliveryEstimate = "40-65m";
-    this.restaurant.imagePath = "assets/img/restaurants/tasty.png"
   }
 
 }

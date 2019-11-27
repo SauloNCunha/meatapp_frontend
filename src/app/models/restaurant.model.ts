@@ -1,4 +1,4 @@
-export interface Restaurant{
+export class Restaurant{
     id: number;
     name: string;
     category: string;

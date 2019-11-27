@@ -7,9 +7,9 @@ import { API_CONFIG } from '../config/api.config';
 @Injectable()
 export class RestaurantsService{
 
-    private url = `${API_CONFIG.url_api}/restaurants`;
+    private url = `${API_CONFIG.urlApi}/restaurants`;
 
-    constructor(private http: HttpClient) {
+    constructor(private http: HttpClient){
 
     }
 
@@ -17,7 +17,8 @@ export class RestaurantsService{
         return this.http.get<Restaurant[]>(this.url);
     }
 
-    findById(id : number) : Observable<Restaurant[]>{
-      return this.http.get<Restaurant[]>(`${this.url}/id/${id}`);
-  }
+    findById(id: number) : Observable<Restaurant>{
+        return this.http.get<Restaurant>(`${this.url}/id/${id}`);
+    }    
+
 }

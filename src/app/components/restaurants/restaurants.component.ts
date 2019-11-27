@@ -9,12 +9,17 @@ import { Restaurant } from 'src/app/models/restaurant.model';
 })
 export class RestaurantsComponent implements OnInit {
 
-  restaurants: Restaurant[];
+  public restaurants: Restaurant[];
 
   constructor(private restaurantService: RestaurantsService) { }
 
   ngOnInit() {
-    this.restaurantService.findAll().subscribe(restaurantes => {this.restaurants = restaurantes; console.log(this.restaurants)});
+      this.restaurantService.findAll()
+        .subscribe(restaurantes => {
+          this.restaurants = restaurantes;
+          console.log(this.restaurants);
+        });
+      
   }
 
 }

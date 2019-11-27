@@ -10,7 +10,7 @@ import { RouterModule } from '@angular/router';
 import { RestaurantsComponent } from './components/restaurants/restaurants.component';
 import { RestaurantComponent } from './components/restaurant/restaurant.component';
 import { RestaurantsService } from './services/restaurants.service';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,7 +23,7 @@ import { HttpClient } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
-    HttpClient,
+    HttpClientModule,
     RouterModule.forRoot(ROUTES)
   ],
   providers: [
